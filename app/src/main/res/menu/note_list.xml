@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main">
+
+
+    <item
+        android:id="@+id/menu_crear"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/menu_nuevo"
+        android:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menu_preferencias"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/menu_preferencias"
+        android:showAsAction="ifRoom"/>
+
+</menu>
+

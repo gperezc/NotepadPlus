@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#8c8b8b"
+    android:padding='6dip'
+    tools:context=".NotepadActivity" >
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="2dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical"
+        android:scrollbarStyle="outsideOverlay"
+        android:background="#060606"
+        android:divider="@drawable/list_divider"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"/>
+
+    <!--
+    <TextView
+        android:id="@id/android:empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lista_vacia"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:drawableLeft="@drawable/app_notes"
+        android:background="#8c8b8b" /> -->
+
+    <ImageView
+        android:id="@+id/imgico"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/app_notes" />
+
+    <TextView
+        android:id="@+id/text111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lista_vacia"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:drawableLeft="@drawable/app_notes"
+        android:background="#8c8b8b" />
+
+</LinearLayout>

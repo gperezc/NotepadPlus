@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_save"
+        android:icon="@drawable/ic_menu_save"
+        android:title="@string/menu_guardar"
+        android:showAsAction="ifRoom" />
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_revert"
+        android:icon="@drawable/ic_menu_revert"
+        android:title="@string/menu_revert"
+        android:showAsAction="never" />
+    <item android:id="@+id/action_borrar"
+        android:icon="@drawable/ic_menu_delete"
+        android:title="@string/menu_delete"
+        android:showAsAction="ifRoom" />
+
+</menu>

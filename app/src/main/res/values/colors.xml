@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#090a0a</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#f90112</color>
+    <color name="colorActionBarTitle">#0223f5</color>
+    <color name="colorFAB">#f90112</color>
+
+    <drawable name="highlight_pressed">#98dff3</drawable>
+    <drawable name="highlight_focused">#b9e6f3</drawable>
+    <color name="background">#ececec</color>
+</resources>

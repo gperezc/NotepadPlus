@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Filtrado de datos">
+        <CheckBoxPreference
+            android:title="Ocultar registros Importantes"
+            android:key="ocultar_registros_Importantes"
+            android:summary="Ocultar los registros marcados como Importantes"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Cambio de usuario y contraseña">
+        <EditTextPreference
+            android:title="Cambio de Usuario"
+            android:key="key_usuario"
+            android:summary="Click para cambiar el Usuario"
+            android:defaultValue=""/>
+
+        <EditTextPreference
+            android:title="Cambio de Password"
+            android:key="key_password"
+            android:summary="Click para cambiar el Password"
+            android:defaultValue=""/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Varios">
+        <Preference
+            android:title="Preference"
+            android:key="key_preference"
+            android:summary="Summary de Preference"
+            android:defaultValue="default de preference"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

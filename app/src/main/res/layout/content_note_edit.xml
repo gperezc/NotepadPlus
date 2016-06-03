@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_edit_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#060606"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.futuracomnetwork.com.notepadplus.Edit_Note">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HipotecaFormulario" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+
+        <TextView
+            android:id="@+id/label_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_file"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/label_nombre"
+            android:ems="10" />
+
+            <TextView
+                android:id="@+id/label_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/note"
+                android:layout_below="@+id/nombre"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/notes"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:layout_below="@+id/label_note"
+            android:inputType="textMultiLine|textImeMultiLine"
+            android:padding="150dp"
+            android:layout_height="fill_parent" />
+
+
+        <TextView
+            android:id="@+id/fecha_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha_create"
+            android:layout_below="@+id/notes"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <CheckBox
+            android:id="@+id/importante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/observaciones"
+            android:layout_below="@+id/fecha_create"
+            android:layout_marginTop="20dp"
+            android:text="@string/label_importante" />
+
+        </RelativeLayout>
+
+
+</ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+
