@@ -89,6 +89,7 @@ public class LoginDbAdapter {
 
     /**
      * Inserta los valores en un registro de la tabla
+     * */
 
     public long insert(ContentValues reg)
     {
@@ -96,7 +97,7 @@ public class LoginDbAdapter {
             abrir();
 
         return db.insert(C_TABLA, null, reg);
-    }*/
+    }
 
     /**
      * Eliminar el registro con el identificador indicado

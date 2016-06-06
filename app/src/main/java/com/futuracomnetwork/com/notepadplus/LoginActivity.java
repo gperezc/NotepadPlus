@@ -4,8 +4,10 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -50,10 +52,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     //
     // Identificador del registro que se edita cuando la opción es MODIFICAR
     //
-    private long id ;
+    /*private long id ;
     private String user;
     private String pass;
-    private String pist;
+    private String pist;*/
+    private String iuser;
+    private String ipass;
+    private String ipist;
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -78,12 +83,18 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
 
+    SharedPreferences preferencias;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        id = 1;
+        //id = 1;
+        preferencias = PreferenceManager.getDefaultSharedPreferences(this);
+        iuser = preferencias.getString("key_usuario", "");
+        ipass = preferencias.getString("key_password", "");
+        ipist = preferencias.getString("key_preference", "");
 
 
         // Set up the login form.
@@ -112,7 +123,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-
+        /*
         LoginDbHelper dbHelper = new LoginDbHelper(getBaseContext());
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -133,7 +144,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         toast2.show();
 
         //dbAdapter.cerrar();
-        cursor.close();
+        cursor.close();*/
     }
 
     private void populateAutoComplete() {
@@ -248,13 +259,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains(user);
+        return email.contains(iuser);
     }
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
         //return password.length() > 4;
-        return password.contains(pass);
+        return password.contains(ipass);
     }
 
     /**
