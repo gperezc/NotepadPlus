@@ -45,17 +45,6 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
-    private LoginDbAdapter dbAdapter;
-    private Cursor cursor;
-    private LoginCursorAdapter noteAdapter ;
-
-    //
-    // Identificador del registro que se edita cuando la opción es MODIFICAR
-    //
-    /*private long id ;
-    private String user;
-    private String pass;
-    private String pist;*/
     private String iuser;
     private String ipass;
     private String ipist;
@@ -123,28 +112,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-        /*
-        LoginDbHelper dbHelper = new LoginDbHelper(getBaseContext());
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-
-        Toast.makeText(getBaseContext(), "Base de datos Login preparada", Toast.LENGTH_SHORT).show();
-
-        dbAdapter = new LoginDbAdapter(this);
-        dbAdapter.abrir();
-
-        cursor = dbAdapter.getRegistro(id);
-
-        user = cursor.getString(cursor.getColumnIndex(LoginDbAdapter.C_COLUMNA_USUARIO));
-        pass = cursor.getString(cursor.getColumnIndex(LoginDbAdapter.C_COLUMNA_PASSWORD));
-        pist = cursor.getString(cursor.getColumnIndex(LoginDbAdapter.C_COLUMNA_PISTA));
-
-        Toast toast2 = Toast.makeText(getApplicationContext(), "Pista: " + pist, Toast.LENGTH_LONG);
-
-        toast2.show();
-
-        //dbAdapter.cerrar();
-        cursor.close();*/
     }
 
     private void populateAutoComplete() {

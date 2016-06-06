@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 public class Configuracion extends PreferenceActivity {
 
-    private LoginDbAdapter dbAdapter;
 
     private long id ;
     private String user;
